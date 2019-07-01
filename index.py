@@ -2,11 +2,11 @@
 from PIL import Image
 import glob, os, sys
 
-fileTypes = (".jpg", ".jpg", ".jp2", ",webp")
-# Mutate the tuple depending on the file type of the selected file 
+fileTypes = (".jpg", ".png", ".jp2", ",webp")
+# Mutate the tuple depending on the file type of the selected file
 
 def exportImages(file):
-    Image.open(file).save(file + fileTypes[1])
+    Image.open(file).save(file + fileTypes[1], )
     Image.open(file).save(file + fileTypes[2])
     Image.open(file).save(file + fileTypes[3])
 
